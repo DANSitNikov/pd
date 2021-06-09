@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import model from '../../../assets/model/untitled.gltf';
 
-const Model = () => {
+const Model = (props) => {
+	const {model} = props;
 	const gltf = useLoader(GLTFLoader, `${model}`);
 
 	return (

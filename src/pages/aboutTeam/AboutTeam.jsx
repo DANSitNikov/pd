@@ -10,7 +10,7 @@ const CardsContainer = styled.div`
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
-	row-gap: 20px;
+	row-gap: 25px;
 	column-gap: 20px;
 	padding-bottom: 20px;
 `;
@@ -21,66 +21,72 @@ const AboutTeam = () => {
 	const peopleMoreInfo = [
 		{
 			name: 'Рублева Елизавета',
-			group: 'ПТКс-3801',
+			group: 'ПТКс-3801-02-00',
+			role: 'Руководитель проекта, проектировщик'
 		},
 		{
-			group: 'ПТКс-3801',
+			group: 'ПТКс-3801-02-00',
 			name: "Покатов Андрей",
+			role: 'Поиск информации'
 		},
 		{
-			group: 'ПТКс-3801',
+			group: 'ПТКс-3801-02-00',
 			name: "Ситников Даниил",
+			role: 'Создание сайта-визитки'
 		},
 		{
-			group: 'ПТКс-3801',
+			group: 'ПТКс-3801-02-00',
 			name: "Васильев Евгений",
+			role: 'Проектировщик'
 		},
 		{
-			group: 'ПТКс-3801',
+			group: 'ПТКс-3801-02-00',
 			name: "Стародумов Илья",
+			role: 'формирование отчетности,\n' +
+				'Формулирование целей и задач, представление проекта для аудитории'
 		}
 	];
 
 	return (
 		<Container>
-			<Header>О команде</Header>
+			<Header>Команда</Header>
 			<CardsContainer>
 				<Person
 					name="Рублева Елизавета"
 					status="Руководитель проекта"
-					todo="Руковожу проектом тут"
+					group="ПТКс-3801-02-00"
 					setShowPerson={setShowPerson}
 					person={0}
 					setActivePopup={setActivePopup}
 				/>
 				<Person
 					name="Покатов Андрей"
-					status="кто-то там"
-					todo="Сделал что-то тут"
+					status="Поиск информации"
+					group="ПТКс-3801-02-00"
 					setShowPerson={setShowPerson}
 					person={1}
 					setActivePopup={setActivePopup}
 				/>
 				<Person
 					name="Ситников Даниил"
-					status="кто-то там"
-					todo="Сделал сайтик тут"
+					status="Создание сайта-визитки"
+					group="ПТКс-3801-02-00"
 					setShowPerson={setShowPerson}
 					person={2}
 					setActivePopup={setActivePopup}
 				/>
 				<Person
 					name="Васильев Евгений"
-					status="кто-то там"
-					todo="Сделал что-то тут"
+					status="Проектировщик"
+					group="ПТКс-3801-02-00"
 					setShowPerson={setShowPerson}
 					person={3}
 					setActivePopup={setActivePopup}
 				/>
 				<Person
 					name="Стародумов Илья"
-					status="кто-то там"
-					todo="Сделал что-то тут"
+					status="Формирование отчетности"
+					group="ПТКс-3801-02-00"
 					setShowPerson={setShowPerson}
 					person={4}
 					setActivePopup={setActivePopup}

@@ -24,6 +24,11 @@ const Card = styled.div`
 	background-color: whitesmoke;
 	padding: 10px;
 	border-radius: 10px;
+	
+	@media (max-width: 550px) {
+    width: 280px;
+    height: 400px;
+	}
 `;
 
 const Name = styled.h2`
@@ -32,7 +37,8 @@ const Name = styled.h2`
 
 const Group = styled.div`
 	display: flex;
-	align-items: center;
+	align-items: start;
+	column-gap: 5px;
 `;
 
 const CloseButton = styled(IconButton)`
@@ -40,6 +46,12 @@ const CloseButton = styled(IconButton)`
 	top: 40px;
 	right: 40px;
 	background-color: whitesmoke !important;
+`;
+
+const Role = styled.div`
+  display: flex;
+  align-items: start;
+  column-gap: 5px;
 `;
 
 const Popup = (props) => {
@@ -54,9 +66,13 @@ const Popup = (props) => {
 			<Card>
 				<Name>{info.name}</Name>
 				<Group>
-					<p>Группа: </p>
+					<p>Группа:</p>
 					<p>{info.group}</p>
 				</Group>
+				<Role>
+					<p>Роль:</p>
+					<p>{info.role}</p>
+				</Role>
 			</Card>
 			<CloseButton
 				onClick={() => setActivePopup(false)}

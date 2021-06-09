@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 const Person = (props) => {
 	const classes = useStyles();
-	const { name, status, todo, setShowPerson, person, setActivePopup } = props;
+	const { name, status, group, setShowPerson, person, setActivePopup } = props;
 
 	return (
 		<>
@@ -31,12 +31,16 @@ const Person = (props) => {
 						{name}
 					</Typography>
 					<br/>
-					<Typography className={classes.pos} color="textSecondary">
+					<Typography
+						className={classes.pos}
+						color="textSecondary"
+						style={{margin: 0, fontSize: '14px'}}
+					>
 						{status}
 					</Typography>
+					<br/>
 					<Typography variant="body2" component="p">
-						{todo}
-						<br/>
+						Группа: {group}
 					</Typography>
 				</CardContent>
 				<CardActions>

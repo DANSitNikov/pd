@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.nav`
@@ -32,6 +32,19 @@ const NavigationItem = styled.li`
 
 const Menu = () => {
 	const [active, setActive] = useState(1);
+	let history = useHistory();
+
+	useEffect(() => {
+		const path = history.location.pathname;
+		if(path === '/') {
+			setActive(1);
+		} else if (path === '/model') {
+			setActive(2);
+		} else if (path === '/about-team') {
+			setActive(3);
+		}
+	}, []);
+
 	return (
 		<Container>
 			<Navigation>
@@ -51,7 +64,7 @@ const Menu = () => {
 					active={3 === active}
 					onClick={() => setActive(3)}
 				>
-					<NavLink to="/about-team">О команде</NavLink>
+					<NavLink to="/about-team">Команда</NavLink>
 				</NavigationItem>
 				{/*<NavigationItem*/}
 				{/*	active={4 === active}*/}
