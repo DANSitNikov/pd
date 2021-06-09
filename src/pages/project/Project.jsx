@@ -15,6 +15,10 @@ export const Container = styled.div`
 
   -ms-overflow-style: none;
   scrollbar-width: none;
+	
+	@media (max-width: 400px) {
+		width: 90%;
+	}
 `;
 
 export const Header = styled.h1`
