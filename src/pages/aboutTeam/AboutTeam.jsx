@@ -58,6 +58,7 @@ const AboutTeam = () => {
 					setShowPerson={setShowPerson}
 					person={0}
 					setActivePopup={setActivePopup}
+					color="#de1f1f"
 				/>
 				<Person
 					name="Покатов Андрей"
@@ -66,6 +67,7 @@ const AboutTeam = () => {
 					setShowPerson={setShowPerson}
 					person={1}
 					setActivePopup={setActivePopup}
+					color="#1f1dd5"
 				/>
 				<Person
 					name="Ситников Даниил"
@@ -74,6 +76,7 @@ const AboutTeam = () => {
 					setShowPerson={setShowPerson}
 					person={2}
 					setActivePopup={setActivePopup}
+					color="#5bd51d"
 				/>
 				<Person
 					name="Васильев Евгений"
@@ -82,6 +85,7 @@ const AboutTeam = () => {
 					setShowPerson={setShowPerson}
 					person={3}
 					setActivePopup={setActivePopup}
+					color="#d7cd50"
 				/>
 				<Person
 					name="Стародумов Илья"
@@ -90,6 +94,7 @@ const AboutTeam = () => {
 					setShowPerson={setShowPerson}
 					person={4}
 					setActivePopup={setActivePopup}
+					color="#930ada"
 				/>
 			</CardsContainer>
 			<Popup

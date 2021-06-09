@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { Button, Card, CardActions, CardContent, makeStyles, Typography } from "@material-ui/core";
-import Popup from '../../../components/popup/Popup';
+import React from 'react';
+import { Card, CardContent, makeStyles, Typography } from "@material-ui/core";
+import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
+import styled from 'styled-components';
 
 const useStyles = makeStyles({
 	root: {
@@ -19,9 +20,23 @@ const useStyles = makeStyles({
 	},
 });
 
+const PersonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+`;
+
+const PersonIcon = styled(PermContactCalendarIcon)`
+	width: 40px !important;
+	height: 40px !important;
+`;
+
 const Person = (props) => {
 	const classes = useStyles();
-	const { name, status, group, setShowPerson, person, setActivePopup } = props;
+	const {
+		name, status, group, setShowPerson,
+		person, setActivePopup, color,
+	} = props;
 
 	return (
 		<>
@@ -42,19 +57,24 @@ const Person = (props) => {
 					<Typography variant="body2" component="p">
 						Группа: {group}
 					</Typography>
+					<PersonContainer>
+						<PersonIcon
+							style={{color: color}}
+						/>
+					</PersonContainer>
 				</CardContent>
-				<CardActions>
-					<Button
-						size="small"
-						variant="outlined"
-            onClick={() => {
-              setShowPerson(person);
-              setActivePopup(true);
-            }}
-					>
-						Узнать больше
-					</Button>
-				</CardActions>
+				{/*<CardActions>*/}
+				{/*	<Button*/}
+				{/*		size="small"*/}
+				{/*		variant="outlined"*/}
+        {/*    onClick={() => {*/}
+        {/*      setShowPerson(person);*/}
+        {/*      setActivePopup(true);*/}
+        {/*    }}*/}
+				{/*	>*/}
+				{/*		Узнать больше*/}
+				{/*	</Button>*/}
+				{/*</CardActions>*/}
 			</Card>
 		</>
 	)
