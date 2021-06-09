@@ -5,6 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-height: 100vh;
+  overflow: hidden;
+  background: #1c1e21;
+}
+
+canvas{
+  height: 500px !important;
+  width: 80% !important;
+  margin: 0 auto;
+  background: #0e0e0f;
 }
 
 code {
